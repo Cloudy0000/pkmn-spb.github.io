@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>Swamp Party Battle</title>
+    <link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+    <!-- Прелоадер с вращающимся покеболом -->
+    <div id="loader">
+        <div class="loader-content">
+            <img src="assets/duskball.png" class="spinning-ball" alt="Loading">
+        </div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">
+			<img src="assets/duskball.png" class="small-logotype" alt="Logo">
+			<div class="site-name">Swamp Party Battle</div>
+			</div>
+            <ul>
+                <li><a href="#info">Инфо</a></li>
+                <li><a href="#gallery">Место</a></li>
+                <li><a href="#section-title2">Заявка</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Секция героя -->
+        <section class="hero-section">
+            <div class="hero-card">
+                <img src="assets/logo.png" class="big-logotype" alt="Logo">
+                <div class="pokemon-display">
+                    <!-- Декоративное место для GIF -->
+                    <div class="gif-window">
+                        <img src="assets/Breloom.png" alt="Breloom">
+                    </div>
+                    <div class="pedestal"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок информации -->
+        <section id="info" class="content-section reveal">
+            <div class="info-grid">
+                <div class="card brown-light">
+                    <h3>О событии</h3>
+                    <p>Периодически мы проводим турниры покемонов в <strong>Санкт-Петербурге</strong>. Участие платное,<br> но зависит от количества участников.</p>
+                </div>
+                <div class="card green-light">
+                    <h3>Правила</h3>
+                    <p>Разрешено использовать только покемонов, доступных в <strong>Pokemon Scarlet</strong> и <strong>Pokemon Violet</strong>.
+					Дополнительно запрещается использовать легендарных, мифических и парадоксальных покемонов.</p>
+                </div>
+                <div class="card turquoise-light">
+                    <h3>Награды</h3>
+                    <p>От числа зарегистрировавшихся зависит призовой фонд.<br>Чем больше участников,<br>тем интереснее призы!</p>
+                </div>
+            </div>
+        </section>
+		<section id="showdown" class="showdown-section">
+			<div class="showdown-container">
+				<!-- Левая часть: Иллюстрация -->
+				<div class="showdown-illustration">
+					<div class="browser-frame">
+						<img src="assets/SD.png" alt="Pokemon Showdown Preview">
+					</div>
+					<div class="decoration-glow"></div>
+				</div>
+
+				<!-- Правая часть: Информация -->
+				<div class="showdown-info">
+					<span class="mini-badge">В какой игре проводится турнир?</span>
+					<h1>Pokemon Showdown</h1>
+					<p>Наш турнир использует платформу <strong>Pokemon Showdown</strong> для проведения битв. Это самый быстрый и удобный способ собрать свою команду мечты!</p>
+					
+					<ul class="mini-features">
+						<li><span></span> Симулятор боев в браузере</li>
+						<li><span></span> Мгновенный подбор оппонентов</li>
+						<li><span></span> Полная настройка характеристик</li>
+					</ul>
+
+					<a href="https://pokemonshowdown.com" target="_blank" class="showdown-btn">Играть!</a>
+				</div>
+			</div>
+		</section>
+		<section class="mega-stats-container">
+			<!-- Левая часть: Изображение -->
+			<div class="mega-image-side">
+				<img src="assets/Prize.png" alt="Pokemon Tournament Prizes">
+			</div>
+
+			<!-- Правая часть: Счетчик -->
+			<div class="mega-counter-side">
+				<div class="counter-content">
+					<span class="counter-badge">Регистрация на 20.12.2026</span>
+					<h2>Заявок на участие:</h2>
+					<div class="count-number">0</div>
+				</div>
+			</div>
+		</section>
+		
+        <!-- Блок приближаемых фотографий -->
+        <section id="gallery" class="content-section">
+            <h2 class="section-title">Место проведения</h2>
+			<ul class="mini-poke-list">
+				<li class="mini-item">
+					<div class="dot brown"></div>
+					<span>Клуб настольных игр «Hobby Games»</span>
+				</li>
+				<li class="mini-item">
+					<div class="dot green"></div>
+					<span>В стоимость участия входят бесплатные чай и кофе</span>
+				</li>
+				<li class="mini-item">
+					<div class="dot turquoise"></div>
+					<span>Санкт-Петербург, Барочная улица 6 (метро Чкаловская)</span>
+				</li>
+			</ul>
+            <div class="photo-box">
+                <div class="photo-item"><img src="assets/hg1.png" alt="Hobby Games"></div>
+                <div class="photo-item"><img src="assets/hg2.png" alt="Hobby Games"></div>
+                <div class="photo-item"><img src="assets/hg3.png" alt="Hobby Games"></div>
+            </div>
+        </section>
+        <h2 id="section-title2">Зарегистрироваться на участие в турнире</h2>
+		<form id="poke-tournament-form" class="registration-form">
+			<!-- Блок тренера (Верхняя панель) -->
+			<div class="trainer-panel flex-row">
+				<div class="panel-header">
+					<h2>Регистрация Тренера</h2>
+					<p>20.12.26</p>
+				</div>
+				<div class="trainer-inputs flex-row">
+					<input type="text" name="trainer_name" placeholder="Имя игрока" required>
+					<input type="text" name="trainer_email" placeholder="Email для связи" required>
+				</div>
+			</div>
+
+			<!-- Сетка покемонов -->
+			<div class="pokemon-slots-grid">
+				<!-- Генерация 6 блоков -->
+				<script>
+					for(let i=1; i<=6; i++) {
+						document.write(`
+							<div class="pokemon-slot-card" data-id="${i}">
+								<div class="pokemon-screen">
+									<img src="assets/duskball.png" id="poke-img-${i}" class="poke-preview">
+								</div>
+
+								<div class="slot-fields flex-col">
+
+									<input type="text" name="p${i}_species" class="species-trigger" 
+										   placeholder="Вид" required>
+									<input type="text" name="p${i}_nickname" placeholder="Кличка">
+									
+									<div class="flex-row">
+										<input type="text" name="p${i}_item" placeholder="Предмет">
+										<input type="text" name="p${i}_ability" placeholder="Способность">
+									</div>
+
+									<div class="flex-row">
+										<input type="text" name="p${i}_nature" placeholder="Характер">
+										<input type="text" name="p${i}_tera" placeholder="Тера-тип">
+									</div>
+
+									<div class="moves-box">
+										<input type="text" name="p${i}_m1" placeholder="Движение 1">
+										<input type="text" name="p${i}_m2" placeholder="Движение 2">
+										<input type="text" name="p${i}_m3" placeholder="Движение 3">
+										<input type="text" name="p${i}_m4" placeholder="Движение 4">
+									</div>
+								</div>
+							</div>
+						`);
+					}
+				</script>
+			</div>
+			<div class="form-footer">
+				<button type="submit" id="send-btn" class="submit-button">Зарегистрировать команду</button>
+			</div>
+		</form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
